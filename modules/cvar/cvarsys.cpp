@@ -250,4 +250,5 @@ CvarSys::~CvarSys()
 {
 	Destroy();
 	singleton = nullptr;
+	ERR_PRINT_ONCE_ED("Cvar Sys Destroyed");
 }
