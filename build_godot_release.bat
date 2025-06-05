@@ -1,3 +1,3 @@
 @echo off
-cd /d "C:\Users\grifb\source\repos\Grifthegnome\GodotEngine"
+cd /d "." REM Sets directory to local file dir.
 scons platform=windows
