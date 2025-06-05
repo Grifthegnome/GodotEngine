@@ -24,4 +24,4 @@ class Cvar : public Node {
 };
 
 
-#endif //CVARS_H
+#endif // CVARS_H

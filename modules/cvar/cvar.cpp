@@ -30,14 +30,14 @@ Dictionary Cvar::get(const StringName &p_name, const String &p_defVal, int p_fla
 
 		//DEVNOTE: Make sure to update this if we add variables to CvarData.
 		Dictionary cvar;
-		cvar["name"]		= cvar_ptr->name;
-		cvar["stringVal"]	= cvar_ptr->stringVal;
+		cvar["name"] = cvar_ptr->name;
+		cvar["stringVal"] = cvar_ptr->stringVal;
 		cvar["resetString"] = cvar_ptr->resetString;
-		cvar["latchString"]	= cvar_ptr->latchString;
-		cvar["intVal"]		= cvar_ptr->intVal;
-		cvar["floatVal"]	= cvar_ptr->floatVal;
-		cvar["flags"]		= cvar_ptr->flags;
-		cvar["modified"]	= cvar_ptr->modified;
+		cvar["latchString"] = cvar_ptr->latchString;
+		cvar["intVal"] = cvar_ptr->intVal;
+		cvar["floatVal"] = cvar_ptr->floatVal;
+		cvar["flags"] = cvar_ptr->flags;
+		cvar["modified"] = cvar_ptr->modified;
 
 		return cvar;
 	}
@@ -68,14 +68,14 @@ Dictionary Cvar::peek(const StringName &p_name) {
 	if (cvar_ptr) {
 		//DEVNOTE: Make sure to update this if we add variables to CvarData.
 		Dictionary cvar;
-		cvar["name"]			= cvar_ptr->name;
-		cvar["stringVal"]		= cvar_ptr->stringVal;
-		cvar["resetString"]		= cvar_ptr->resetString;
-		cvar["latchString"]		= cvar_ptr->latchString;
-		cvar["intVal"]			= cvar_ptr->intVal;
-		cvar["floatVal"]		= cvar_ptr->floatVal;
-		cvar["flags"]			= cvar_ptr->flags;
-		cvar["modified"]		= cvar_ptr->modified;
+		cvar["name"] = cvar_ptr->name;
+		cvar["stringVal"] = cvar_ptr->stringVal;
+		cvar["resetString"] = cvar_ptr->resetString;
+		cvar["latchString"] = cvar_ptr->latchString;
+		cvar["intVal"] = cvar_ptr->intVal;
+		cvar["floatVal"] = cvar_ptr->floatVal;
+		cvar["flags"] = cvar_ptr->flags;
+		cvar["modified"] = cvar_ptr->modified;
 
 		return cvar;
 	}

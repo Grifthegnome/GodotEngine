@@ -6,4 +6,4 @@
 void initialize_cvar_module(ModuleInitializationLevel p_level);
 void uninitialize_cvar_module(ModuleInitializationLevel p_level);
 
-#endif //CVAR_REGISTER_TYPES
+#endif // CVAR_REGISTER_TYPES
