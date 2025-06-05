@@ -72,7 +72,7 @@ public:
 	const uint32_t CVAR_FLAGS_MAX = 1024;
 
 	//DEVNOTE: If these change, be sure to update GDScript binds.
-	const enum CvarBitFlags {
+	enum CvarBitFlags {
 		CVAR_SAVE = 1 << 0, //Saved system settings.
 		CVAR_TEMP = 1 << 1, //Will be reset on game restart.
 
@@ -90,7 +90,7 @@ public:
 
 	};
 
-	const enum CvarSetResult {
+	enum CvarSetResult {
 		CVAR_SET_SUCCESS,
 		CVAR_SET_SUCCESS_ONRESTART,
 		CVAR_SET_FAILED_INVALID,
