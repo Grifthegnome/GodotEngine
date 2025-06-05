@@ -106,7 +106,7 @@ public:
 	void Remove(StringName name);
 
 	CvarData *Get(StringName name, String defVal, uint16_t flags);
-	CvarSetResult Set(StringName name, String val);
+	CvarSetResult Set( StringName name, String val);
 
 	CvarData *Peek(StringName name);
 	bool Exists(StringName name);
@@ -134,11 +134,11 @@ private:
 
 	void Init();
 	void Destroy();
-	CvarData *Find(StringName name);
+	CvarData *Find( StringName name);
 
 };
 
 VARIANT_ENUM_CAST(CvarSys::CvarSetResult);
 VARIANT_ENUM_CAST(CvarSys::CvarBitFlags)
 
-#endif // CVARSYS_H
+#endif //CVARSYS_H

@@ -74,7 +74,7 @@ CvarData *CvarSys::Add(StringName name, String defVal, uint16_t flags) {
 }
 
 //TODO: DO WE NEED THIS? SHOULD WE EVER BE REMOVING CVARS BEFORE WE DESTROY THIS SYSTEM?
-void CvarSys::Remove(StringName name)
+void CvarSys::Remove( StringName name)
 {
 	if (cvars.has(name))
 	{
@@ -106,12 +106,12 @@ CvarData *CvarSys::Get(StringName name, String defVal, uint16_t flags) {
 		if (cvar_ptr->flags & CVAR_ONRESTART)
 		{
 			//TODO: Do we need to check other flags here like READYONLY, INITONLY, DEVONLY?
-			String latchString = cvar_ptr->latchString;
-			cvar_ptr->stringVal	= cvar_ptr->latchString;
-			cvar_ptr->latchString = "";
-			cvar_ptr->intVal = cvar_ptr->stringVal.to_int();
-			cvar_ptr->floatVal = cvar_ptr->stringVal.to_float();
-			cvar_ptr->modified = true;
+			String latchString		= cvar_ptr->latchString;
+			cvar_ptr->stringVal		= cvar_ptr->latchString;
+			cvar_ptr->latchString	= "";
+			cvar_ptr->intVal		= cvar_ptr->stringVal.to_int();
+			cvar_ptr->floatVal		= cvar_ptr->stringVal.to_float();
+			cvar_ptr->modified		= true;
 		}
 
 		return cvar_ptr;
@@ -156,16 +156,16 @@ CvarSys::CvarSetResult CvarSys::Set(StringName name, String val) {
 		if (cvar_ptr->flags & CVAR_ONRESTART)
 		{
 			//This will be set the next time get is called for the cvar. (i.e. on level restart) 
-			cvar_ptr->latchString = val;
-			cvar_ptr->modified = true;
+			cvar_ptr->latchString	= val;
+			cvar_ptr->modified		= true;
 			return CVAR_SET_SUCCESS_ONRESTART; 
 		}
 		else
 		{
 			cvar_ptr->stringVal = val;
-			cvar_ptr->intVal = val.to_int();
-			cvar_ptr->floatVal = val.to_float();
-			cvar_ptr->modified = true;
+			cvar_ptr->intVal	= val.to_int();
+			cvar_ptr->floatVal	= val.to_float();
+			cvar_ptr->modified	= true;
 			return CVAR_SET_SUCCESS;
 		}
 	}
