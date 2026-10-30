@@ -1,6 +1,6 @@
 @echo off
 cd /d . REM Sets directory to local file dir.
-set version=4.4.2.rc
+set version=4.5.dev
 echo building release template for godot %version%
 scons platform=windows target=template_release module_mono_enabled=yes
 

@@ -1,6 +1,6 @@
 @echo off
 cd /d . REM Sets directory to local file dir.
-set version=4.4.2.rc
+set version=4.5.dev
 scons platform=windows target=template_debug dev_build=yes dev_mode=yes module_mono_enabled=yes
 
 mkdir %USERPROFILE%\AppData\Roaming\Godot\export_templates\%version%.mono
